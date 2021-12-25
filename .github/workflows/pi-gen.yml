@@ -17,7 +17,7 @@ jobs:
       - name: Run Build
         run: |
           pushd pi-gen
-          ./build-docker.sh
+          ./build.sh
           popd
 
       - name: Archive rpi image artifact

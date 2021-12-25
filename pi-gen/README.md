@@ -2,12 +2,6 @@
 
 Tool used to create Raspberry Pi OS images. (Previously known as Raspbian).
 
-> **Changes:** Changed `bullseye` dist for `buster` in debian image to build pi-gen with Docker
->
-> Files changed:
-> `pi-gen/build-docker.sh` and `pi-gen/Dockerfile`
-> https://github.com/RPi-Distro/pi-gen/issues/561#issuecomment-968180324
-
 ## Dependencies
 
 pi-gen runs on Debian-based operating systems. Currently it is only supported on
