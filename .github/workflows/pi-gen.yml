@@ -1,0 +1,27 @@
+name: Pi-Gen Image
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+
+  build:
+    name: Build
+    runs-on: [self-hosted, linux, arm64]
+    steps:
+
+      - name: Check out pi-gen code
+        uses: actions/checkout@v2
+
+      - name: Run Build
+        run: |
+          pushd pi-gen
+          ./build-docker.sh
+          popd
+
+      - name: Archive rpi image artifact
+        uses: actions/upload-artifact@v2
+        with:
+          name: rpi-image
+          path: pi-gen/deploy
