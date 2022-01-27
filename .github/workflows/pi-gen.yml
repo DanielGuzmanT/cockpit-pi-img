@@ -8,7 +8,7 @@ jobs:
 
   build:
     name: Build
-    runs-on: [self-hosted, linux, arm64]
+    runs-on: [self-hosted, linux, arm]
     steps:
 
       - name: Check out pi-gen code
@@ -17,7 +17,7 @@ jobs:
       - name: Run Build
         run: |
           pushd pi-gen
-          sudo ./build.sh
+          sudo ./build-docker.sh
           popd
 
       - name: Archive rpi image artifact
